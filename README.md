@@ -88,6 +88,10 @@ Para clonar este repositorio
 ```
   mingw32-make run
 ```
+o en linux
+```
+  make run
+```
   Si todo está bién verás mensajes de error y luego la leyenda `bin_a_gray debe generar un codigo gray [FAIL]`
   
 ## Corregir la implementación
@@ -99,6 +103,10 @@ Para corregir la implementación debes editar el archivo `design.vhd`.
 - Para probar tu implementación debes guardar el archivo con _Ctrl+S_, ir a la terminal (puedes usar _Ctrl+ñ_), y ejecutar
 ```
   mingw32-make run
+```
+o en linux
+```
+  make run
 ```
 - Si las pruebas fallan (resultado `[FAIL]`) puedes encontrar pistas leyendo los errores.
 - El práctico está completo cuando pasa las pruebas (resultado `[PASS]`)
