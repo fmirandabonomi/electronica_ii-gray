@@ -5,6 +5,7 @@ Para completar el práctico debes:
 - Instalar la extension puorc.awesome-vhdl
 - Instalar Git.
 - Instalar GHDL.
+- Instalar make.
 - Clonar este repositorio en tu máquina.
 - Ejecutar el testbench y ver que falla.
 - Corregir la implementación hasta que pase las pruebas.
@@ -38,7 +39,7 @@ Para instalar Git
   git config --global --add user.email <escribe tu email aquí>
   exit
 ```
-## Instalar GHDL
+## Instalar GHDL y make
 
 En linux se instala con el manejador de paquetes de tu distribución.
 En Windows
@@ -54,6 +55,10 @@ En Windows
   pacman -S mingw-w64-i686-ghdl-mcode
 ```
   debes aceptar para que proceda con la instalación.
+- Instala make (32 bits)
+```
+  pacman -S mingw-w64-i686-make
+```
 - Puedes cerrar la consola luego de instalar
 ```
   exit
@@ -79,10 +84,9 @@ Para clonar este repositorio
 - Selecciona una carpeta base. El repositorio se clonará en una nueva carpeta llamada `electronica_ii-gray` dentro de la carpeta que elijas.
 - Una vez clonado aparecerá un cuadro en el sector inferior izquierdo y te dará la opción de abrirlo. Selecciona _Open_ u _Open in New Window_.
 - Abre una terminal con el menú _Terminal->New terminal_
-- Escribe los comandos 
+- Escribe el comando
 ```
-  ghdl -a *.vhd
-  ghdl -r bin_a_gray_tb
+  mingw32-make run
 ```
   Si todo está bién verás mensajes de error y luego la leyenda `bin_a_gray debe generar un codigo gray [FAIL]`
   
@@ -92,10 +96,9 @@ Para corregir la implementación debes editar el archivo `design.vhd`.
 - Abre el panel _explorer_ con _Ctrl+Mayus+E_
 - Haz click en `design.vhd` para abrirlo. Aparecerá el editor en el lado derecho
 - Lee el programa y haz los cambios que corresponda
-- Para probar tu implementación debes guardar el archivo con _Ctrl+S_, ir a la terminal (puedes usar _Ctrl+ñ_), e introducir los comandos
+- Para probar tu implementación debes guardar el archivo con _Ctrl+S_, ir a la terminal (puedes usar _Ctrl+ñ_), y ejecutar
 ```
-  ghdl -a *.vhd
-  ghdl -r bin_a_gray_tb
+  mingw32-make run
 ```
 - Si las pruebas fallan (resultado `[FAIL]`) puedes encontrar pistas leyendo los errores.
 - El práctico está completo cuando pasa las pruebas (resultado `[PASS]`)
