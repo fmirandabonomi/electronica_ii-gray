@@ -1,4 +1,4 @@
-# Trabajo práctico de Electrónica II para ingeniería electrónica.
+# Trabajo práctico 1 - Electrónica II 2022 para ingeniería electrónica - Codificador para código gray de tres bits
 
 Para completar el práctico debes:
 - Instalar Visual Studio Code.
