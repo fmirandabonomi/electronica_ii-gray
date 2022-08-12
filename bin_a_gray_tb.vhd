@@ -65,7 +65,13 @@ begin
       resultados(i) := gray;
     end loop;
     for i in resultados'range loop
+      if all_passed = false then
+        exit;
+      end if;
       for k in i+1 to resultados'length-1 loop
+        if all_passed = false then
+          exit;
+        end if;
       	passed := (resultados(i) /= resultados(k)); 
         all_passed := passed and all_passed;
         assert passed

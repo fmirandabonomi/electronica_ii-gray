@@ -84,12 +84,12 @@ Para clonar este repositorio
   ghdl -a *.vhd
   ghdl -r bin_a_gray_tb
 ```
-  Si todo está bién verás una serie de mensajes de error y luego "bin_a_gray debe generar un codigo gray [FAIL]"
+  Si todo está bién verás mensajes de error y luego la leyenda `bin_a_gray debe generar un codigo gray [FAIL]`
   
 ## Corregir la implementación
 
 Para corregir la implementación debes editar el archivo `design.vhd`. 
-- Abre el panel "explorer" con _Ctrl+Mayus+E_
+- Abre el panel _explorer_ con _Ctrl+Mayus+E_
 - Haz click en `design.vhd` para abrirlo. Aparecerá el editor en el lado derecho
 - Lee el programa y haz los cambios que corresponda
 - Para probar tu implementación debes guardar el archivo con _Ctrl+S_, ir a la terminal (puedes usar _Ctrl+ñ_), e introducir los comandos
@@ -97,5 +97,5 @@ Para corregir la implementación debes editar el archivo `design.vhd`.
   ghdl -a *.vhd
   ghdl -r bin_a_gray_tb
 ```
-  Si falla (`[FAIL]`) puedes encontrar pistas leyendo los errores.
-- El práctico está completo cuando pasa las pruebas (`[PASS]`)
+- Si las pruebas fallan (resultado `[FAIL]`) puedes encontrar pistas leyendo los errores.
+- El práctico está completo cuando pasa las pruebas (resultado `[PASS]`)
