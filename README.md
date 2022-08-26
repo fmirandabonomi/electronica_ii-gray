@@ -86,11 +86,11 @@ Para clonar este repositorio
 - Abre una terminal con el menú _Terminal->New terminal_
 - Escribe el comando
 ```
-  mingw32-make run
+  mingw32-make
 ```
 o en linux
 ```
-  make run
+  make
 ```
   Si todo está bién verás mensajes de error y luego la leyenda `bin_a_gray debe generar un codigo gray [FAIL]`
   
@@ -102,11 +102,11 @@ Para corregir la implementación debes editar el archivo `design.vhd`.
 - Lee el programa y haz los cambios que corresponda
 - Para probar tu implementación debes guardar el archivo con _Ctrl+S_, ir a la terminal (puedes usar _Ctrl+ñ_), y ejecutar
 ```
-  mingw32-make run
+  mingw32-make
 ```
 o en linux
 ```
-  make run
+  make
 ```
 - Si las pruebas fallan (resultado `[FAIL]`) puedes encontrar pistas leyendo los errores.
 - El práctico está completo cuando pasa las pruebas (resultado `[PASS]`)
