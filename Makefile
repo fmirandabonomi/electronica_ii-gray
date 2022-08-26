@@ -8,7 +8,7 @@ GHDLFLAGS=
 GHDLRUNFLAGS=
 
 # Default target : elaborate
-all : run
+all : init run
 
 # Elaborate target.  Almost useless
 elab : force
@@ -20,10 +20,6 @@ run : force
 
 # Targets to analyze libraries
 init: force
-	# C:\msys64\mingw32\lib/ghdl\ieee\v93\../../src/ieee/v93/std_logic_1164.vhdl
-	# C:\msys64\mingw32\lib/ghdl\ieee\v93\../../src/ieee/v93/std_logic_1164-body.vhdl
-	# C:\msys64\mingw32\lib/ghdl\ieee\v93\../../src/ieee/v93/numeric_std.vhdl
-	# C:\msys64\mingw32\lib/ghdl\ieee\v93\../../src/ieee/v93/numeric_std-body.vhdl
 	$(GHDL) -a $(GHDLFLAGS) bin_a_gray_tb.vhd
 	$(GHDL) -a $(GHDLFLAGS) design.vhd
 
