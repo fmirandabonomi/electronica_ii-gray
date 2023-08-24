@@ -81,7 +81,7 @@ Para clonar este repositorio
 ```
   https://github.com/fmirandabonomi/electronica_ii-gray.git
 ```
-- Selecciona una carpeta base. El repositorio se clonará en una nueva carpeta llamada `electronica_ii-gray` dentro de la carpeta que elijas.
+- Selecciona una carpeta base. El repositorio se clonará en una nueva carpeta llamada `electronica_ii-gray` dentro de la carpeta que elijas. **Asegurate que en la ruta de acceso no haya carpetas con espacios en sus nombres**
 - Una vez clonado aparecerá un cuadro en el sector inferior izquierdo y te dará la opción de abrirlo. Selecciona _Open_ u _Open in New Window_.
 - Abre una terminal con el menú _Terminal->New terminal_
 - Escribe el comando
