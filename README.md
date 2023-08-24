@@ -102,3 +102,4 @@ Para corregir la implementación debes editar el archivo `design.vhd`.
 ```
 - Si las pruebas fallan (resultado `[FAIL]`) puedes encontrar pistas leyendo los errores.
 - El práctico está completo cuando pasa las pruebas (resultado `[PASS]`)
+- Para eliminar los archivos generados por ghdl usa el comando `make clean`
