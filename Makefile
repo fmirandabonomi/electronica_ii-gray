@@ -13,4 +13,4 @@ all : $(cf)
 	ghdl -i $(params) *.vhd
 clean : 
 	ghdl clean
-	$(rm) $(cf)
+	$(rm) $(cf) *.o bin_a_gray_tb.exe
