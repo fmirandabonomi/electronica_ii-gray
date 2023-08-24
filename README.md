@@ -47,29 +47,29 @@ En Windows
 - Abre la consola de MSYS (desde el acceso directo en el menú inicio o buscando con windows+q)
 - Actualiza el sistema ejecutando el siguiente comando (respeta mayúscula y minúscula, presiona enter para ejecutar) repetidas veces hasta que indique que todo está actualizado (up to date).
 ```
-  pacman -Syu
+  pacman --noconfirm -Syu
 ```
-  Nota: Debes aceptar cuando pregunte. Con algunas actualizaciones deberás volver a abrir MSYS.
-- Instala ghdl (32 bits) y sus dependencias
+  Nota: Con algunas actualizaciones deberás volver a abrir MSYS.
+- Instala ghdl y sus dependencias
 ```
-  pacman -S mingw-w64-i686-ghdl-mcode
+  pacman --noconfirm -S ucrt64/mingw-w64-ucrt-x86_64-ghdl-llvm
 ```
   debes aceptar para que proceda con la instalación.
-- Instala make (32 bits)
+- Instala make
 ```
-  pacman -S mingw-w64-i686-make
+  pacman --noconfirm -S make
 ```
 - Puedes cerrar la consola luego de instalar
 ```
   exit
 ```  
-- Agrega al path la carpeta `C:\msys64\mingw32\bin` para ello debes
+- Agrega al path las carpetas `C:\msys64\ucrt64\bin` y `C:\msys64\usr\bin` para ello debes
   - Abrir _Propiedades del sistema_
   - Abrir _Configuración avanzada del sistema_
   - En opciones avanzadas elegir _Variables de entorno_
   - En el listado de variables de usuario hacer doble click en la variable `Path`
-  - Agregar al final de la lista `C:\msys64\mingw32\bin`
-    Nota: en versiones anteriores de windows aparece un solo texto largo en lugar de un listado, en ese caso agregar `;C:\msys64\mingw32\bin` (incluye el punto y coma) al final del texto
+  - Agregar al final de la lista `C:\msys64\ucrt64\bin` y luego `C:\msys64\usr\bin`
+    Nota: en versiones anteriores de windows aparece un solo texto largo en lugar de un listado, en ese caso agregar `;C:\msys64\ucrt64\bin;C:\msys64\usr\bin` (incluye el punto y coma) al final del texto
 
 ## Clonar el repositorio y probar el testbench
 
@@ -86,10 +86,6 @@ Para clonar este repositorio
 - Abre una terminal con el menú _Terminal->New terminal_
 - Escribe el comando
 ```
-  mingw32-make
-```
-o en linux
-```
   make
 ```
   Si todo está bién verás mensajes de error y luego la leyenda `bin_a_gray debe generar un codigo gray [FAIL]`
@@ -101,10 +97,6 @@ Para corregir la implementación debes editar el archivo `design.vhd`.
 - Haz click en `design.vhd` para abrirlo. Aparecerá el editor en el lado derecho
 - Lee el programa y haz los cambios que corresponda
 - Para probar tu implementación debes guardar el archivo con _Ctrl+S_, ir a la terminal (puedes usar _Ctrl+ñ_), y ejecutar
-```
-  mingw32-make
-```
-o en linux
 ```
   make
 ```
